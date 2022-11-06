@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -18,6 +20,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
@@ -33,14 +36,21 @@ public class FormCadastro extends AppCompatActivity {
 
     private EditText edit_nome, edit_email, edit_cpf, edit_data_nasc, edit_celular, edit_cep, edit_senha;
     private Button bt_cadastro;
-    String[] mensagens = {"Preencha todos os campos", "Conta cadastrada com sucesso"};
+    String[] mensagens = {"Preencha todos os campos",
+                          "Conta cadastrada com sucesso"};
+
     String usuarioID;
+
+    @Override
+    public void onBackPressed() {
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_cadastro);
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.turquoise_light)));
         IniciarComponentes();
 
         bt_cadastro.setOnClickListener(new View.OnClickListener() {
@@ -57,8 +67,12 @@ public class FormCadastro extends AppCompatActivity {
 
                 if (nome.isEmpty() || email.isEmpty() || email.trim().isEmpty() || CPF.isEmpty() ||
                         data_nasc.isEmpty() || celular.isEmpty() || CEP.isEmpty() || senha.isEmpty()) {
-                    Toast.makeText(getBaseContext(), mensagens[0],
-                            Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getBaseContext(), mensagens[0],
+//                            Toast.LENGTH_SHORT).show();
+                    Snackbar snackbar = Snackbar.make(v, mensagens[0], Snackbar.LENGTH_SHORT);
+                    snackbar.setBackgroundTint(Color.WHITE);
+                    snackbar.setTextColor(Color.BLACK);
+                    snackbar.show();
 
                 } else {
                     CadastrarUsuario(v);
@@ -80,8 +94,14 @@ public class FormCadastro extends AppCompatActivity {
 
                     SalvarDadosUsuario();
 
-                    Toast.makeText(getBaseContext(), mensagens[1],
-                            Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getBaseContext(), mensagens[1],
+//                            Toast.LENGTH_SHORT).show();
+//                    finish();
+
+                    Snackbar snackbar = Snackbar.make(v, mensagens[1], Snackbar.LENGTH_SHORT);
+                    snackbar.setBackgroundTint(Color.WHITE);
+                    snackbar.setTextColor(Color.BLACK);
+                    snackbar.show();
                     finish();
 
                 } else {
@@ -97,13 +117,13 @@ public class FormCadastro extends AppCompatActivity {
                     } catch (Exception e) {
                         erro = "Erro ao cadastrar usuário";
                     }
-                    Toast.makeText(getBaseContext(), erro,
-                            Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getBaseContext(), erro,
+//                            Toast.LENGTH_SHORT).show();
 
-//                   Snackbar snackbar = Snackbar.make(v, erro, Snackbar.LENGTH_SHORT);
-//                   snackbar.setBackgroundTint(Color.WHITE);
-//                   snackbar.setTextColor(Color.BLACK);
-//                   snackbar.show();
+                   Snackbar snackbar = Snackbar.make(v, erro, Snackbar.LENGTH_SHORT);
+                   snackbar.setBackgroundTint(Color.WHITE);
+                   snackbar.setTextColor(Color.BLACK);
+                   snackbar.show();
                 }
             }
         });

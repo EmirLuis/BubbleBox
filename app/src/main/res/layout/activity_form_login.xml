@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.core.widget.NestedScrollView
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
     tools:context=".FormLogin">
 
+    <ImageButton
+        android:id="@+id/buttonExit"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/turquoise_light"
+        android:src="@drawable/ic_exit"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="323dp"
+        tools:layout_editor_absoluteY="7dp"
+        tools:ignore="MissingConstraints" />
+
     <ImageView
         android:id="@+id/Logo"
-        android:layout_width="200dp"
-        android:layout_height="250dp"
+        android:layout_width="180dp"
+        android:layout_height="280dp"
         android:src="@drawable/logo_bbox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +44,7 @@
         android:id="@+id/edit_email"
         style="@style/Edit_Text"
         android:hint="Email"
+        android:textSize="22dp"
         android:drawableRight="@drawable/ic_email"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="@id/containerComponents"
@@ -64,10 +75,11 @@
         android:id="@+id/text_esqueceu_senha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
         android:text="@string/esqueceu"
-        android:textColor="@color/black"
-        android:layout_marginLeft="50dp"
-        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="120dp"
+        android:textSize="20dp"
         android:onClick="callReset"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/containerComponents"/>
@@ -87,6 +99,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:indeterminateTint="@color/purple_light"
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,6 +109,7 @@
         android:id="@+id/text_tela_cadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
         android:text="@string/text_cadastro"
         android:textColor="@color/white"
         android:textSize="22dp"

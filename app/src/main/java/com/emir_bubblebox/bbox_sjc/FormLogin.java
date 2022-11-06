@@ -4,11 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +18,7 @@ import android.widget.Toast;
 import com.emir_bubblebox.bbox_sjc.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -30,9 +33,25 @@ public class FormLogin extends AppCompatActivity {
     String[] mensagens = {"Preencha todos os campos","Login efetuado com sucesso","Email/Senha não cadastrado"};
 
     @Override
+    public void onBackPressed() {
+    }
+
+    ImageButton buttonExit;
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_login);
+
+        buttonExit = findViewById(R.id.buttonExit);
+
+        buttonExit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
 
         getSupportActionBar().hide();
         IniciarComponentes();
@@ -62,12 +81,12 @@ public class FormLogin extends AppCompatActivity {
                 String senha = edit_senha.getText().toString();
 
                 if (email.isEmpty() || senha.isEmpty()){
-                    Toast.makeText(getBaseContext(),mensagens [0],
-                            Toast.LENGTH_SHORT).show();
-//                    Snackbar snackbar = Snackbar.make(v, mensagens[0], Snackbar.LENGTH_SHORT);
-//                    snackbar.setBackgroundTint(Color.WHITE);
-//                    snackbar.setTextColor(Color.BLACK);
-//                    snackbar.show();
+//                    Toast.makeText(getBaseContext(),mensagens [0],
+//                            Toast.LENGTH_SHORT).show();
+                    Snackbar snackbar = Snackbar.make(v, mensagens[0], Snackbar.LENGTH_SHORT);
+                    snackbar.setBackgroundTint(Color.WHITE);
+                    snackbar.setTextColor(Color.BLACK);
+                    snackbar.show();
 
                 }else{
                     AutenticarUsuario(v);
@@ -95,19 +114,18 @@ public class FormLogin extends AppCompatActivity {
                         }
                     },4000);
                 }else {
-//                    String erro;
-
+                    String erro;
                     try {
                         throw task.getException();
                     } catch (Exception e) {
 //                        erro = "Email/Senha não cadastrado";
 //                    }
-                    Toast.makeText(getBaseContext(), mensagens[2],
-                            Toast.LENGTH_SHORT).show();
-//                    Snackbar snackbar = Snackbar.make(view, erro, Snackbar.LENGTH_SHORT);
-//                    snackbar.setBackgroundTint(Color.WHITE);
-//                    snackbar.setTextColor(Color.BLACK);
-//                    snackbar.show();
+//                    Toast.makeText(getBaseContext(), mensagens[2],
+//                            Toast.LENGTH_SHORT).show();
+                    Snackbar snackbar = Snackbar.make(view, mensagens[2], Snackbar.LENGTH_SHORT);
+                    snackbar.setBackgroundTint(Color.WHITE);
+                    snackbar.setTextColor(Color.BLACK);
+                    snackbar.show();
                     }
                 }
             }

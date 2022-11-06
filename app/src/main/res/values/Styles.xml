@@ -3,21 +3,7 @@
 
     <style name="ContainerComponents">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">178dp</item>
-        <item name="android:background">@drawable/container_components</item>
-        <item name="android:layout_margin">20dp</item>
-    </style>
-
-    <style name="ContainerComponentsSmall">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">95dp</item>
-        <item name="android:background">@drawable/container_components</item>
-        <item name="android:layout_margin">20dp</item>
-    </style>
-
-    <style name="ContainerComponentsBig">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">575dp</item>
+        <item name="android:layout_height">170dp</item>
         <item name="android:background">@drawable/container_components</item>
         <item name="android:layout_margin">20dp</item>
     </style>
@@ -26,9 +12,9 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/edit_text</item>
-        <item name="android:padding">20dp</item>
+        <item name="android:padding">15dp</item>
         <item name="android:maxLength">30</item>
-        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginLeft">40dp</item>t
         <item name="android:layout_marginRight">40dp</item>
         <item name="android:layout_marginTop">15dp</item>
     </style>
