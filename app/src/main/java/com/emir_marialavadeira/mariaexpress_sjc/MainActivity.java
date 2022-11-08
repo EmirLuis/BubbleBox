@@ -1,18 +1,15 @@
-package com.emir_bubblebox.bbox_sjc;
+package com.emir_marialavadeira.mariaexpress_sjc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
-import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
-import android.view.Menu;
 import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 
-import com.emir_bubblebox.bbox_sjc.R;
+import com.emir_marialavadeira.mariaexpress_sjc.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         // calling the action bar
         ActionBar actionBar = getSupportActionBar();
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.turquoise_light)));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blue)));
 
         // showing the back button in action bar
         actionBar.setDisplayHomeAsUpEnabled(true);

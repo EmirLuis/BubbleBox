@@ -1,4 +1,4 @@
-package com.emir_bubblebox.bbox_sjc;
+package com.emir_marialavadeira.mariaexpress_sjc;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -7,15 +7,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.emir_bubblebox.bbox_sjc.R;
+import com.emir_marialavadeira.mariaexpress_sjc.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -50,7 +47,7 @@ public class FormCadastro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_cadastro);
 //        getSupportActionBar().hide();
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.turquoise_light)));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.pink)));
         IniciarComponentes();
 
         bt_cadastro.setOnClickListener(new View.OnClickListener() {

@@ -1,15 +1,16 @@
-package com.emir_bubblebox.bbox_sjc;
+package com.emir_marialavadeira.mariaexpress_sjc;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.emir_bubblebox.bbox_sjc.R;
+import com.emir_marialavadeira.mariaexpress_sjc.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -39,7 +40,9 @@ public class FormTelaPrincipal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_tela_principal);
 
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.pink)));
+
         IniciarComponentes();
 
         bt_deslogar.setOnClickListener(new View.OnClickListener() {

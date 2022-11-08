@@ -1,4 +1,4 @@
-package com.emir_bubblebox.bbox_sjc;
+package com.emir_marialavadeira.mariaexpress_sjc;
 
 import org.junit.Test;
 

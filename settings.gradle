@@ -13,5 +13,5 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = "Bubble Box - SJC"
+rootProject.name = "Maria Lavadeira - SJC"
 include ':app'

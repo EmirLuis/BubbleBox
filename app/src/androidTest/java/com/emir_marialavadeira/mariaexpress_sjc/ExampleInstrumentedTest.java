@@ -1,4 +1,4 @@
-package com.emir_bubblebox.bbox_sjc;
+package com.emir_marialavadeira.mariaexpress_sjc;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.emir_bubblebox.bbox_sjc", appContext.getPackageName());
+        assertEquals("com.emir_marialavadeira.mariaexpress_sjc", appContext.getPackageName());
     }
 }

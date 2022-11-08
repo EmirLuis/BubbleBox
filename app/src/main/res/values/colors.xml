@@ -7,8 +7,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="turquoise">#1DA8AF</color>
-    <color name="turquoise_light">#488D9E</color>
-    <color name="purple">#542360</color>
-    <color name="purple_light">#705182</color>
+    <color name="blue">#0073C1</color>
+    <color name="pink">#D70280</color>
 </resources>

@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "742388470693",
-    "firebase_url": "https://projetofirebase-9495e-default-rtdb.firebaseio.com",
-    "project_id": "projetofirebase-9495e",
-    "storage_bucket": "projetofirebase-9495e.appspot.com"
+    "project_number": "177170036954",
+    "project_id": "maria-express-sjcampos",
+    "storage_bucket": "maria-express-sjcampos.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:742388470693:android:f4a9824174c35521e10e4c",
+        "mobilesdk_app_id": "1:177170036954:android:a9fd72726c2933c34f8de3",
         "android_client_info": {
-          "package_name": "com.emir_bubblebox.bbox_sjc"
+          "package_name": "com.emir_marialavadeira.mariaexpress_sjc"
         }
       },
       "oauth_client": [
         {
-          "client_id": "742388470693-4o2nul28khgocajupbvmmcff98jcc1us.apps.googleusercontent.com",
+          "client_id": "177170036954-rhce1qbbemcqusvi2sk7av88d5upr1n2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAwgPVZ8iAxIv3FTN1AaxSzUGJqfdSsAEI"
+          "current_key": "AIzaSyAYTf4A9V8Om8TEOC19VTPrO3pmCIQzi24"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "742388470693-4o2nul28khgocajupbvmmcff98jcc1us.apps.googleusercontent.com",
+              "client_id": "177170036954-rhce1qbbemcqusvi2sk7av88d5upr1n2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
